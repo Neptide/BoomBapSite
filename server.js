@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/create-ticket', (req, res) => {
+app.post('create-ticket', (req, res) => {
     console.log("Dati ricevuti dal form:", req.body);
     const { name, idCode } = req.body;
 
