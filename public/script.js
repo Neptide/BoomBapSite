@@ -1,7 +1,7 @@
 document.getElementById('ticketForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var formData = new FormData(event.target);
-    fetch('create-ticket', {
+    fetch('/create-ticket', { // Aggiunto lo slash all'inizio del percorso
         method: 'POST',
         body: formData
     }).then(response => response.blob())
